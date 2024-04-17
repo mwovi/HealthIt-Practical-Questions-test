@@ -32,7 +32,7 @@ server.post("/register", (req, res) => {
 //READ
 server.get("/activity", (req, res) => {
 
-    let sql = "SELECT * FROM activity";
+    let sql = "SELECT * FROM activity ORDER BY id DESC";
     db.query(sql, (err,result) =>{
         if (err) {
             console.log(err);
@@ -70,6 +70,8 @@ server.delete("/delete/:index", (req,res) =>{
     let sql = "DELETE FROM activity WHERE id = ?"
     db.query(sql, [index], (err,result) =>{err ? console.log(err) : res.send(result)})
 })
+
+//Server is running in port 3001
 server.listen(3001, () =>
     console.log("Running in the port 3001")
 );
