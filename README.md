@@ -25,7 +25,15 @@
   <li><a href="https://github.com/topics/mysql">Mysql</a></li>
 </ul>
 
+## Install Run
+To install and run the 
+  1. Frontend - Download the zip file, navigate to the client folder then run the commands below <br>
+    `npm install` <br>
+    `npm run dev`
 
+  2. Backend - Download the zip file, navigate to the server folder then run the commands below <br>
+    `npm install` <br>
+    `npm run dev`
 
 
 <h1>Question 4: </h1>
