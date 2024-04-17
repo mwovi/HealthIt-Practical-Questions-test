@@ -12,14 +12,6 @@
 <h1 align="center">Reactjs Node Mysql CRUD</h1>
 <p align="center">A simple CRUD made with Reactjs, Nodejs and Mysql</p>
 
-Content Table
-=================
-<!--ts-->
-   * [Home](#home)
-   * [Edit](#edit)
-   * [Tools](#tools)
-<!--te-->
-
 # Home
 ![home layout](./Question%203/screenshots/screenshot1.PNG)
 
