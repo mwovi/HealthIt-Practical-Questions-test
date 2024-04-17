@@ -29,8 +29,10 @@
 
 
 <h1>Question 4: </h1>
-<p><i>Write a simple , well documented source code that reads from a text file, searches for a specific string and displays the number of occurrences of that string in the text file. 
-Write a function that reads any of the following file formats, removes special characters and converts the file to an sql file with headers<p></i>
+
+## Part 1
+
+<p><i>Write a simple , well documented source code that reads from a text file, searches for a specific string and displays the number of occurrences of that string in the text file. <p></i>
 
 <h3> Solution </h3>
 # searchString.js
@@ -69,6 +71,54 @@ console.log(occurrences);
 ```
 
 The result is logged to the console.
+
+## Part 2
+
+<P><i>Write a function that reads any of the following file formats, removes special characters and converts the file to an sql file with headers</i></p>
+
+# writeSql.js
+
+This JavaScript file contains three main functions: `removeSpecialCharacters`, `convertToSql`, and `writeSqlFile`.
+
+## removeSpecialCharacters Function
+
+The `removeSpecialCharacters` function takes a string as an argument and removes any special characters from it, leaving only alphanumeric characters and spaces.
+
+```javascript
+function removeSpecialCharacters(str) {
+    return str.replace(/[^a-zA-Z0-9 ]/g, "");
+}
+```
+
+## convertToSql Function
+
+The `convertToSql` function takes an input file path and an output path as arguments. It determines the file extension of the input file and reads the file accordingly. If the file is a CSV file, it uses the `csv-parser` module to parse the file. If the file is an XLSX file, it uses the `xlsx` module. The function removes any special characters from the data and stores the cleaned data in an array.
+
+```javascript
+function convertToSql(inputPath, outputPath) {
+    // ...
+}
+```
+
+## writeSqlFile Function
+
+The `writeSqlFile` function takes the cleaned data and an output path as arguments. It generates a string that represents the SQL commands to create a table and insert the data into the table. This string is then written to a new .sql file at the output path.
+
+```javascript
+function writeSqlFile(data, outputPath) {
+    // ...
+}
+```
+
+## Usage
+
+The script can be used to convert a CSV or XLSX file to an SQL file with the data cleaned of special characters. The input file path and output path should be provided as arguments to the `convertToSql` function.
+
+```javascript
+convertToSql('path/to/input.csv', 'path/to/output.sql');
+```
+
+The output will be an SQL file with commands to create a table and insert the cleaned data.
 
 <h1>Question 5: </h1>
 
